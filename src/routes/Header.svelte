@@ -1,0 +1,1 @@
+<header class="flex h-20 shrink-0 items-end rounded-lg bg-primary-400 p-4 md:h-52"></header>
