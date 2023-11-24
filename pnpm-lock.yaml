@@ -8,6 +8,9 @@ dependencies:
   '@fontsource-variable/inter':
     specifier: ^5.0.15
     version: 5.0.15
+  '@fontsource/lusitana':
+    specifier: ^5.0.8
+    version: 5.0.8
   lucide-svelte:
     specifier: ^0.292.0
     version: 0.292.0(svelte@4.2.7)
@@ -329,6 +332,10 @@ packages:
 
   /@fontsource-variable/inter@5.0.15:
     resolution: {integrity: sha512-CdQPQQgOVxg6ifmbrqYZeUqtQf7p2wPn6EvJ4M+vdNnsmYZgYwPPPQDNlIOU7LCUlSGaN26v6H0uA030WKn61g==}
+    dev: false
+
+  /@fontsource/lusitana@5.0.8:
+    resolution: {integrity: sha512-fnSI8c31J200RkvzQKcgsAw7wXPkvEA02yNTx7V6QmlTusNNHLxRTZGEzxnASSX+P3DLxLNM+6CEcyVicdRAoQ==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.13:
