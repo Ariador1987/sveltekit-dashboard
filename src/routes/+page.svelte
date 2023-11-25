@@ -1,5 +1,11 @@
 <script lang="ts">
     import Header from "./Header.svelte"
+    // import {width, height, src } from "./flowers-OTO-1920x1080.jpg?w=1920&format=jpg&as=srcset"
+    // import Image from "./flowers-OTO-1920x1080.jpg"
+    import {src, width, height} from "./flowers-OTO-1920x1080.jpg?w=1920&h=1080&format=webp&as=metadata&img"
+    import avifFlowers from "./flowers-OTO-1920x1080.jpg?w=1920&h=1080&format=avif&as=srcset&img"
+    import {src as src2, width as width2, height as height2} from "./plane-OTO-1920x1080.jpg?w=1920&h=1080&format=webp&as=metadata&img"
+    import avifPlane from "./plane-OTO-1920x1080.jpg?w=1920&h=1080&format=avif&as=srcset&img"
     import { MoveRight } from 'lucide-svelte'
 </script>
 
@@ -21,5 +27,27 @@
             <span>Log in</span>
             <MoveRight />
         </a>
+    </div>
+    <div class="flex items-center justify-center p-6 md:w-3/5">
+        <picture class="md:hidden">
+            <source srcset={avifFlowers} type="image/avif"/>
+            <img 
+                alt="Screenshots of the dashboard project showing two different mobile views" 
+                src={src}
+                class="block object-fill shadow-lg shadow-slate-400 rounded-lg"
+                {height}
+                {width}
+            />
+        </picture>
+        <picture class="hidden md:block">
+            <source srcset={avifPlane} type="image/avif"/>
+            <img 
+                alt="Screenshots of the dashboard project showing two different mobile views" 
+                src={src2}
+                class="block object-fill shadow-lg shadow-slate-400 rounded-lg"
+                height={height2}
+                width={width2}
+            />
+        </picture>
     </div>
 </main>
