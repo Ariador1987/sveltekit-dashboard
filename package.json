@@ -16,6 +16,7 @@
 		"seed": "node --experimental-specifier-resolution=node --loader ts-node/esm prisma/seed.ts"
 	},
 	"devDependencies": {
+		"@faker-js/faker": "^8.3.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.27.4",
 		"@types/node": "^20.10.0",
