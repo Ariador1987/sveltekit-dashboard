@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client';
 import { userFactory } from './mocks/userFactory';
 import { customerFactory } from './mocks/customerFactory';
 import { revenueFactory } from './mocks/revenueFactory';
+
 const prisma = new PrismaClient();
 
 try {
