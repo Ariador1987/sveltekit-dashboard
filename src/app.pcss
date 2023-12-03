@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-    body, html {
-        @apply h-full;
-    }
-    a {
-        @apply underline decoration-primary-500;
-    }
+	body,
+	html {
+		@apply h-full;
+	}
+	a {
+		@apply underline decoration-primary-500;
+	}
+	.skeleton-loader {
+		@apply relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm
+            before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-gray-400/10 before:to-transparent;
+	}
 }
