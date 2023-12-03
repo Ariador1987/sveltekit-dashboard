@@ -29,6 +29,7 @@
 			class="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium text-black no-underline hover:bg-sky-100 hover:text-primary-600 md:flex-none md:justify-start md:p-2 md:px-3"
 			class:active={$page.url.pathname === href}
 			{href}
+			data-sveltekit-preload-data="hover"
 		>
 			<svelte:component this={icon} />
 			<p class="hidden md:block">{label}</p></a

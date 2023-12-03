@@ -10,7 +10,8 @@ export const load: PageServerLoad = async () => {
 	try {
 		// Use Prisma Client methods to read data
 		const stats = Promise.all([fetchAllRevenue(), fetchLatestInvoices(), fetchCardData()]).then(
-			([totalRevenue, latestInvoices, cardData]) => {
+			async ([totalRevenue, latestInvoices, cardData]) => {
+				await delay();
 				return { totalRevenue, latestInvoices, cardData };
 			}
 		);

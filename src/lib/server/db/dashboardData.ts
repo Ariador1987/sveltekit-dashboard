@@ -31,7 +31,8 @@ export const fetchCardData = async (): Promise<CardData> => {
 			await prisma.customer.count()
 		]);
 
-	await delay();
+	// To simulate slow request with streaming
+	// await delay();
 
 	return {
 		amountCollected: amountCollectedResult._sum.amount || 0,
