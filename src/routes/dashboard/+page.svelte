@@ -13,6 +13,18 @@
 
 <svelte:window bind:innerWidth />
 
+<!-- {#await data.streamed?.tests then testsArr}
+	{#await testsArr?.test1 then d1}
+		<h2>{d1}</h2>
+	{/await}
+	{#await testsArr?.test2 then d2}
+		<h2>{d2}</h2>
+	{/await}
+	{#await testsArr?.test3 then d3}
+		<h2>{d3}</h2>
+	{/await}
+{/await} -->
+
 {#await data?.streamed?.stats}
 	<h1 class="mb-4 font-serif text-2xl capitalize md:text-2xl">Dashboard</h1>
 	<DashboardSkeleton />

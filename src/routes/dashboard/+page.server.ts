@@ -16,8 +16,24 @@ export const load: PageServerLoad = async () => {
 			}
 		);
 
+		const test1: Promise<string> = new Promise((resolve) => {
+			setTimeout(() => {
+				resolve('Promise 1');
+			}, 1000);
+		});
+		const test2: Promise<string> = new Promise((resolve) => {
+			setTimeout(() => {
+				resolve('Promise 2');
+			}, 2000);
+		});
+		const test3: Promise<string> = new Promise((resolve) => {
+			setTimeout(() => {
+				resolve('Promise 3');
+			}, 3000);
+		});
+
 		return {
-			streamed: { stats }
+			streamed: { stats, tests: { test1, test2, test3 } }
 		};
 	} catch (error) {
 		console.error('Error reading data:', error);
